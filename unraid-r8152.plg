@@ -3,7 +3,7 @@
   <!ENTITY name      "r8152-driver">
   <!ENTITY author    "ich777">
   <!ENTITY version   "2023.02.07">
-  <!ENTITY gitURL    "https://github.com/&author;/unraid-&name;/raw/master">
+  <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/unraid-&name;/master">
   <!ENTITY pluginURL "&gitURL;/&name;.plg">
   <!ENTITY plugin    "/boot/config/plugins/&name;">
   <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
