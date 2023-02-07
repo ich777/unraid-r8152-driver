@@ -67,10 +67,6 @@ else
 fi
 }
 
-if [ ! -f "&plugin;/&name;.png" ]; then
-  wget -q -nc --show-progress --progress=bar:force:noscroll -O "&plugin;/&name;.png" "https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/realtek.png"
-fi
-
 # Define Variables
 KERNEL_V="$(uname -r)"
 PACKAGE="r8152"
@@ -86,6 +82,10 @@ rm -rf $(ls -d &packages;/* | grep -v "${KERNEL_V%%-*}")
 # Check if RTL8152 package is already downloaded and installed
 check
 
+if [ ! -f "&plugin;/&name;.png" ]; then
+  wget -q -nc --show-progress --progress=bar:force:noscroll -O "&plugin;/&name;.png" "https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/realtek.png"
+fi
+
 #Install icon
 if [ ! -f "&emhttp;/images/&name;.png" ]; then
   if [ ! -d "&emhttp;/images" ]; then
@@ -94,9 +94,16 @@ if [ ! -f "&emhttp;/images/&name;.png" ]; then
   cp &plugin;/&name;.png &emhttp;/images/
 fi
 
-echo
-echo "---------------Installation of RTL8152 package successful-------------------"
-echo
+if [[ $(modinfo r8152 | grep -w "version:" | cut -d 'v' -f3) == 2* ]]; then
+  echo
+  echo "-----------Nothing to do, OOT RTL8152 package already installed-------------"
+  echo
+else
+  echo
+  echo "-----------Please reboot your server to activate the OOT driver!------------"
+  echo
+fi
+
 
 </INLINE>
 </FILE>
