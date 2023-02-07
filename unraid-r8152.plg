@@ -21,11 +21,11 @@
 
 <FILE Name="&emhttp;/README.md">
 <INLINE>
-**RTL8152/6 USB Drivers**
+**RTL8152/4/6 USB Drivers**
   
 This package contains the Realtek OOT Drivers and installs them, a reboot is required after installing the plugin (upgrading to a newer Unraid version maybe needs a second reboot too).  
   
-The following Chipsets are supported by this driver: RTL8152B, RTL8154/RTL8154B, RTL8153/RTL8153B, RTL8156/RTL8156B(S)(G)  
+The following Chipsets are supported by this driver: RTL8152B, RTL8153/RTL8153B, RTL8154/RTL8154B, RTL8156/RTL8156B(S)(G)  
   
 Source: https://github.com/wget/realtek-r8152-linux
 </INLINE>
