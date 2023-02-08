@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
   <!ENTITY name      "r8152-driver">
   <!ENTITY author    "ich777">
-  <!ENTITY version   "2023.02.07">
+  <!ENTITY version   "2023.02.08">
   <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/unraid-&name;/master">
   <!ENTITY pluginURL "&gitURL;/unraid-r8152.plg">
   <!ENTITY plugin    "/boot/config/plugins/&name;">
@@ -14,7 +14,10 @@
 
 <CHANGES>
 
-###2022.05.30
+###2023.02.08
+- Added note how to enable 2.5Gbit/s speeds
+
+###2023.02.07
 - Initial release
 
 </CHANGES>
